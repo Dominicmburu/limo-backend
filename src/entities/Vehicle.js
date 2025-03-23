@@ -81,11 +81,15 @@ const Vehicle = new EntitySchema({
       target: 'Reservation',
       type: 'one-to-many',
       inverseSide: 'vehicle',
+      cascade: true,
+      onDelete: "CASCADE",
     },
     reviews: {
       target: 'Review',
       type: 'one-to-many',
       inverseSide: 'vehicle',
+      cascade: true,
+      onDelete: "CASCADE",
     },
   },
 });
