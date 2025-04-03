@@ -32,6 +32,17 @@ router.post(
 );
 
 
+router.post(
+  '/verify-otp',
+  [
+    body('email').isEmail().withMessage('Valid email is required'),
+    body('otp').isLength({ min: 6, max: 6 }).withMessage('OTP must be 6 digits'),
+  ],
+  validateRequest,
+  AuthController.verifyOtp
+);
+
+
 router.post('/logout', AuthController.logout);
 
 module.exports = router;

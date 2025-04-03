@@ -73,6 +73,7 @@ class VehicleController {
     }
   }
 
+
   static async updateVehicle(req, res, next) {
     const vehicleRepository = AppDataSource.getRepository(Vehicle);
     const vehicleId = req.params.id;

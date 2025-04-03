@@ -17,10 +17,12 @@ module.exports = (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'your_jwt_secret');
+    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'limo');
     req.userId = decoded.userId;
+    req.userEmail = decoded.email;
     next();
   } catch (err) {
-    res.status(401).json({ message: 'Token is not valid' });
+    console.error('Token verification error:', err);
+    res.status(401).json({ message: 'Token is not valid', error: err.message });
   }
 };

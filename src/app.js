@@ -17,7 +17,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-    origin: 'https://limousine-reservation-system.vercel.app', 
+    origin: ['https://limousine-reservation-system.vercel.app', 'http://localhost:5173'], 
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true, 
   }));

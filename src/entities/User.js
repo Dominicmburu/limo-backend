@@ -33,6 +33,18 @@ const User = new EntitySchema({
       type: 'timestamp',
       updateDate: true,
     },
+    otp: {
+      type: 'varchar',
+      nullable: true,
+    },
+    otp_expiry: {
+      type: 'timestamp',
+      nullable: true,
+    },
+    is_verified: {
+      type: 'boolean',
+      default: false,
+    },    
   },
   relations: {
     reservations: {
