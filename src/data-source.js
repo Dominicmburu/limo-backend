@@ -19,6 +19,9 @@ const AppDataSource = new DataSource({
   entities: [User, Reservation, Review, Payment, Promotion, Vehicle],
   migrations: [],
   subscribers: [],
+  ssl: {
+    rejectUnauthorized: false,
+  },
 });
 
 module.exports = AppDataSource;
