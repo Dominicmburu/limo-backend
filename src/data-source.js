@@ -9,11 +9,11 @@ require('dotenv').config();
 
 const AppDataSource = new DataSource({
   type: 'postgres',
-  host: process.env.DB_HOST || 'dpg-cvg5n97noe9s73bmnl10-a.oregon-postgres.render.com',
+  host: process.env.DB_HOST || 'dpg-d07k2opr0fns738l454g-a.oregon-postgres.render.com',
   port: process.env.DB_PORT ? parseInt(process.env.DB_PORT) : 5432,
   username: process.env.DB_USERNAME || 'dominic',
-  password: process.env.DB_PASSWORD || 'BwC9xCziUH666GTss5EePTzCGZUJYYJs',
-  database: process.env.DB_NAME || 'limodb',
+  password: process.env.DB_PASSWORD || 'WCArBz4DgGwnOVVB2AGBvNwB6oOR4rHK',
+  database: process.env.DB_NAME || 'limodb_cf62',
   synchronize: true,
   logging: false,
   entities: [User, Reservation, Review, Payment, Promotion, Vehicle],
@@ -50,3 +50,4 @@ module.exports = AppDataSource;
 // });
 
 // module.exports = AppDataSource;
+
