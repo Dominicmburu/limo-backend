@@ -7,7 +7,6 @@ const { Promotion } = require('./entities/Promotion');
 const { Vehicle } = require('./entities/Vehicle');
 require('dotenv').config();
 
-postgresql://dominic:WCArBz4DgGwnOVVB2AGBvNwB6oOR4rHK@dpg-d07k2opr0fns738l454g-a/limodb_cf62
 const AppDataSource = new DataSource({
   type: 'postgres',
   host: process.env.DB_HOST || 'dpg-d07k2opr0fns738l454g-a',
